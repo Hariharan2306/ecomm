@@ -8,9 +8,9 @@ import {
 
 const userRouter = Router();
 
-userRouter.get("/fetch-details", fetchUserDataController);
+userRouter.get("/fetch-details/:userName", fetchUserDataController);
 userRouter.put("/update-password", updateUserPasswordController);
 userRouter.post("/create-user", createUserController);
-userRouter.delete("/delete-user", deleteUserController);
+userRouter.delete("/delete-user/:userName", deleteUserController);
 
 export default userRouter;
